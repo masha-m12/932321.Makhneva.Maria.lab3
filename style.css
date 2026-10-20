@@ -57,7 +57,9 @@ button:active {
     color: var(--main-color);
 }
 button:focus {
-    outline: 3px solid var(--accent-color);
+    background-color: var(--accent-color);
+    color: var(--main-color);
+    outline: 3px solid var(--main-color);
 }
 footer {
     text-align: center;
@@ -138,6 +140,7 @@ a:visited {
     align-items: center;
     gap: 12px;
     flex: 1 1 240px;
+    max-width: 380px;
     padding: 12px;
     border: 2px solid var(--main-color);
     background-color: rgba(255, 255, 255, 0.7);
@@ -204,6 +207,10 @@ a:visited {
     .places-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .hobby-card {
+        flex: 1 1 calc(50% - 15px);
+        max-width: none;
+    }
     aside {
         float: none;
         max-width: none;
@@ -215,6 +222,10 @@ a:visited {
     }
 }
 @media (max-width: 600px) {
+    .hobby-card {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
     .places-grid {
         grid-template-columns: 1fr;
     }
