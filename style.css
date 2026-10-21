@@ -23,8 +23,14 @@ header {
     padding: 5px 10px 5px;
 }
 img {
+    max-width: 100%;
+    height: auto;
     border-radius: 50%;
     border: 2px solid var(--main-color);
+}
+header img {
+    max-width: 150px;
+    object-fit: cover;
 }
 aside {
     float: right;
@@ -147,8 +153,8 @@ a:visited {
     box-sizing: border-box;
 }
 .hobby-card img {
-    border-radius: 50%;
-    border: 2px solid var(--main-color);
+    max-width: 90px;
+    object-fit: cover;
     flex-shrink: 0;
     background-color: var(--bg-color);
 }
