@@ -4,12 +4,15 @@
     --bg-color: #edd7fa;
     --font-mono: "Courier New", monospace;
 }
+* {
+    box-sizing: border-box;
+}
 h1 {
     position: relative;
 }
 h1::after {
-  content: "🖌";
-  position: absolute;
+    content: "🖌";
+    position: absolute;
 }
 body {
     background-color: var(--bg-color);
@@ -32,22 +35,30 @@ header img {
     max-width: 150px;
     object-fit: cover;
 }
+.content {
+    display: flex;
+    gap: 40px;
+    align-items: flex-start;
+    margin: 25px 0;
+    padding: 0 40px;
+}
 aside {
-    float: right;
-    max-width: 290px;
-    margin-right: 390px;
+    flex: 0 0 290px;
+    order: 2;
     border: 2px solid var(--main-color);
     text-align: center;
-    padding: 5px 15px 25px;
-    margin-top: 25px
+    padding: 15px;
 }
 main {
-    margin-left: 390px;
-    margin-right: 380px;
+    flex: 1;
+    min-width: 0;
+    order: 1;
 }
 form {
     text-align: center;
     padding: 5px 10px 5px;
+    max-width: 850px;
+    margin: 20px auto;
 }
 button {
     background-color: var(--main-color);
@@ -150,7 +161,6 @@ a:visited {
     padding: 12px;
     border: 2px solid var(--main-color);
     background-color: rgba(255, 255, 255, 0.7);
-    box-sizing: border-box;
 }
 .hobby-card img {
     max-width: 90px;
@@ -210,21 +220,22 @@ a:visited {
 }
 
 @media (max-width: 992px) {
+    .content {
+        flex-direction: column;
+        gap: 20px;
+        padding: 0 20px;
+    }
+    aside {
+        flex: 1 1 auto;
+        width: 100%;
+        order: -1;
+    }
     .places-grid {
         grid-template-columns: repeat(2, 1fr);
     }
     .hobby-card {
         flex: 1 1 calc(50% - 15px);
         max-width: none;
-    }
-    aside {
-        float: none;
-        max-width: none;
-        margin: 15px;
-        box-sizing: border-box;
-    }
-    main {
-        margin: 15px;
     }
 }
 @media (max-width: 600px) {
@@ -234,13 +245,5 @@ a:visited {
     }
     .places-grid {
         grid-template-columns: 1fr;
-    }
-    aside {
-        float: none;
-        max-width: 100%;
-        margin: 15px;
-    }
-    main {
-        margin: 15px;
     }
 }
