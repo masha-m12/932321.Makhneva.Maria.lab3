@@ -35,6 +35,11 @@ header img {
     max-width: 150px;
     object-fit: cover;
 }
+.author-name {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 13px 0;
+}
 .content {
     display: flex;
     gap: 40px;
@@ -168,14 +173,14 @@ a:visited {
     flex-shrink: 0;
     background-color: var(--bg-color);
 }
-.hobby-text h4 {
+.hobby-text h3 {
     margin: 0 0 6px;
     color: var(--main-color);
-    font-size: 16px;
+    font-size: 17px;
 }
 .hobby-text p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 .places-grid {
     display: grid;
@@ -210,13 +215,13 @@ a:visited {
     );
     text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
 }
-.place-card figcaption h4 {
+.place-card figcaption h3 {
     margin: 0 0 6px;
     font-size: 17px;
 }
 .place-card figcaption p {
     margin: 0;
-    font-size: 13px;
+    font-size: 14px;
 }
 
 @media (max-width: 992px) {
